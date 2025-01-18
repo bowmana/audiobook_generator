@@ -1,0 +1,22 @@
+
+
+#ffmpeg files
+ffmpeg-master*/
+# FFmpeg files
+ffmpeg-master*/
+ffmpeg.exe
+ffplay.exe
+ffprobe.exe
+.env
+.jpg
+.png
+.gif
+.mp3
+.mp4
+*.exe
+
+.venv/
+__pycache__/
+character_references/
+generated_images/
+
