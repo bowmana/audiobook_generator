@@ -1,0 +1,10 @@
+moviepy==1.0.3
+pyttsx3
+Pillow
+numpy
+python-dotenv
+openai
+pydub
+beautifulsoup4
+requests
+nltk

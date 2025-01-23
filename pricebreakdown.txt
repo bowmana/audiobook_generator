@@ -1,0 +1,7 @@
+GPT-4 (gpt-4-1106-preview): This model costs $0.01 per 1,000 input tokens and $0.03 per 1,000 output tokens.
+DALL-E 3 (dall-e-3): Pricing starts at $0.04 per image generated4.
+The Whisper-1 model, which is OpenAI's speech recognition API, is priced at $0.006 per minute of transcribed audio. This pricing can be broken down as follows:
+Per second: $0.0001 (rounded to seconds)
+Per 10 minutes: $0.06
+Per hour: $0.364
+TTS (tts-1): The text-to-speech API is priced at $0.015 per 1,000 input characters.

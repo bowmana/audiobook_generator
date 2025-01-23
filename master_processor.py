@@ -7,6 +7,7 @@ from createVideo import create_video_with_audio
 from moviepy.editor import concatenate_videoclips, VideoFileClip
 from openai import OpenAI
 from dotenv import load_dotenv
+from openaihelpers import estimate_full_book_cost, print_cost_estimate
 
 # Load environment variables
 load_dotenv()
@@ -66,6 +67,17 @@ def process_book(url, title):
     """Main function to process the entire book"""
     print("1. Scraping book text...")
     book_text = get_gutenberg_text(url, title)
+    
+    # Add cost estimation before processing
+    print("\nCalculating cost estimate...")
+    estimate = estimate_full_book_cost(book_text)
+    print_cost_estimate(estimate)
+    
+    # Ask for confirmation before proceeding
+    response = input("\nWould you like to proceed with processing? (y/n): ")
+    if response.lower() != 'y':
+        print("Processing cancelled.")
+        return
     
     print("2. Splitting text into chunks...")
     chunks = split_text_into_chunks(book_text)
